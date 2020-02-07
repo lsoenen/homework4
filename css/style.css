@@ -82,7 +82,7 @@ nav{
 
 }
 
-{
+header{
   background-attachment: fixed; /* Parallax effect */
   background-position: center;  /* Parallax effect */
   background-repeat: no-repeat; /* Parallax effect */
@@ -93,6 +93,14 @@ nav{
   /* Your code here */
   /* Set background-image to header.jpg in the images folder */
   /* Span one row */
+
+  grid-column-start: 1;
+  grid-column-end: -1;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  background-image: url("../images/header.jpg");
+  background-repeat: no-repeat;
+
 }
 
 header p{
@@ -100,12 +108,7 @@ header p{
   font-size: 24px;
   padding: 0 100px;
   text-align: center;
-  grid-column-start: 1;
-  grid-column-end: -1;
-  grid-row-start: 2;
-  grid-row-end: 3;
-  background-image: url("../images/header.jpg");
-  background-repeat: no-repeat;
+
 }
 
 
@@ -137,25 +140,33 @@ header p{
 .about, .about-image{
   /*Your code here */
   /* See documentation for mobile view */
-  grid-column: 2 / span 2;
+  grid-row-start: 3;
+  grid-row-end: 4;
 
 }
 
 .method, .method-image{
   /*Your code here */
   /* See documentation for mobile view */
+  grid-row-start: 4;
+  grid-row-end: 5;
+
 }
 
 
 .clients, .clients-image{
   /*Your code here */
   /* See documentation for mobile view */
+  grid-row-start: 5;
+  grid-row-end: 6;
 }
 
 
 .contact, .contact-image{
   /*Your code here */
   /* See documentation for mobile view */
+  grid-row-start: 6;
+  grid-row-end: 7;
 }
 
 .text-block{
@@ -191,11 +202,15 @@ header p{
   .about, .clients, .method-image, .contact-image{
   /*Your code here */
   /* See documentation for desktop view */
+  grid-column-start: 2;
+  grid-column-end: 3;
   }
 
   .about-image, .clients-image, .method, .contact{
     /*Your code here */
     /* See documentation for desktop view */
+    grid-column-start: 3;
+    grid-column-end: 4;
     }
 
 
